@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import CourseCard from '../../components/shared/course-card';
 
 interface Course {
   id: string;
   title: string;
   description: string;
   duration: string;
+  imageUrl: string;
 }
 
 export default function Courses() {
@@ -28,18 +30,22 @@ export default function Courses() {
 
   return (
     <div>
-      <h1>Courses</h1>
-      {isloading ? (
-        <p>Loading!!</p>
-      ) : (
-        courses.map((course) => (
-          <div key={course.id}>
-            <h2>{course.title}</h2>
-            <p>{course.description}</p>
-            <p>{course.duration}</p>
-          </div>
-        ))
-      )}
+      <h1 className="text-center text-4xl mt-5 font-bold">Courses</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 g-6 overflow-hidden items-center justify-items-center">
+        {isloading ? (
+          <p className="text-center text-3xl mt-5">Loading courses...</p>
+        ) : (
+          courses.map((course) => (
+            <CourseCard
+              key={course.id}
+              title={course.title}
+              description={course.description}
+              imageUrl={course.imageUrl}
+              duration={course.duration}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 }
