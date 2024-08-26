@@ -1,12 +1,13 @@
 import { createServer, Model } from 'miragejs';
 import { ModelDefinition } from 'miragejs/-types';
+import { coursesData } from '../data/courses';
 
 interface Course {
   id: string;
   title: string;
   description: string;
   duration: string;
-};
+}
 
 export default function mackServer({ environment = 'development' } = {}) {
   return createServer({
@@ -17,19 +18,8 @@ export default function mackServer({ environment = 'development' } = {}) {
     },
 
     seeds(server) {
-      server.create('course', {
-        id: '1',
-        title: 'React',
-        description:
-          'React is a JavaScript library for building user interfaces',
-        duration: '2 hours',
-      });
-      server.create('course', {
-        id: '2',
-        title: 'javascript',
-        description:
-          'JavaScript is a programming language that conforms to the ECMAScript specification',
-        duration: '2 hours',
+      coursesData.forEach((course) => {
+        server.create('course', course);
       });
     },
     routes() {
