@@ -1,3 +1,5 @@
+import HoverRating from "../rating/rating";
+
 type Course = {
   title: string;
   description: string;
@@ -23,6 +25,7 @@ export default function CourseCard({
         </div>
         <div className="p-4 flex-grow flex flex-col">
           <h2 className="text-xl font-semibold">{title}</h2>
+          <HoverRating />
           <p className="mt-2 text-gray-600 flex-grow">{description}</p>
           <p className="mt-2 text-gray-500">{duration}</p>
         </div>
