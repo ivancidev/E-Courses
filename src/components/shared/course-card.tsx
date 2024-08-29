@@ -1,11 +1,5 @@
+import { Course } from "../../interfaces/course";
 import HoverRating from "../rating/rating";
-
-type Course = {
-  title: string;
-  description: string;
-  duration: string;
-  imageUrl: string;
-};
 
 export default function CourseCard({
   title,
