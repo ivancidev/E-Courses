@@ -1,13 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Course } from '../../interfaces/course';
 import CourseCard from '../../components/shared/course-card';
-
-interface Course {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  imageUrl: string;
-}
 
 export default function Courses() {
   const [courses, setCourses] = useState<Course[]>([]);
