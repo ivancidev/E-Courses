@@ -1,7 +1,10 @@
-export async function fetchCourses(url: string) {
+import { Course } from '../interfaces/course';
+
+export async function fetchCourses(url: string): Promise<Course[]> {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error('Failed to fetch courses');
   }
-  return await response.json();
+  const data = await response.json();
+  return data.courses;
 }
