@@ -15,7 +15,7 @@ export default function Courses() {
     <div>
       <h1 className="text-center text-4xl mt-5 font-bold">Courses</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 g-6 overflow-hidden items-center justify-items-center">
-        {courses.map((course: Course) => (
+        {courses?.map((course: Course) => (
           <CourseCard
             key={course.id}
             title={course.title}
