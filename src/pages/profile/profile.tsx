@@ -1,6 +1,9 @@
+import ProfileDetails from "../../components/profile/profile-details";
 
-export default function profile() {
+export default function Profile() {
   return (
-    <div>profile</div>
+    <div>
+      <ProfileDetails />
+    </div>
   )
 }
