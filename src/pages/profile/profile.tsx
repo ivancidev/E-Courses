@@ -1,7 +1,7 @@
-import Achievements from '../../components/profile/achievements';
-import CourseProgress from '../../components/profile/course-progress';
-import ProfileDetails from '../../components/profile/profile-details';
-import Stats from '../../components/profile/stats';
+import Achievements from './components/achievements';
+import CourseProgress from './components/course-progress';
+import ProfileDetails from './components/profile-details';
+import Stats from './components/stats';
 
 export default function Profile() {
   return (

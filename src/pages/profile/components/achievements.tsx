@@ -1,6 +1,6 @@
-import cupStart from '../../assets/icons/cup-star.svg';
-import graduate from '../../assets/icons/graduate.svg';
-import clock from '../../assets/icons/clock.svg';
+import cupStart from '../../../assets/icons/cup-star.svg';
+import graduate from '../../../assets/icons/graduate.svg';
+import clock from '../../../assets/icons/clock.svg';
 
 export default function Achievements() {
   return (
