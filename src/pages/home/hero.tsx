@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div
       className="w-full h-screen justify-center items-center bg-cover bg-center"
-      style={{ backgroundImage: 'url(/presentation.jpg)' }}
+      style={{ backgroundImage: 'url(/images/presentation.jpg)' }}
     >
       <div className="flex justify-center items-center h-full bg-black bg-opacity-45">
         <div className="text-center text-white">
