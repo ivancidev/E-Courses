@@ -1,5 +1,5 @@
 import CourseCard from '../../components/shared/course-card';
-import useFetchGet from '../../hooks/use-fetch-get';
+import { useFetchGet } from '../../hooks/use-fetch-get';
 import { Course } from '../../interfaces/course';
 
 export default function Courses() {
@@ -18,10 +18,12 @@ export default function Courses() {
         {courses?.map((course: Course) => (
           <CourseCard
             key={course.id}
+            id={course.id}
             title={course.title}
             description={course.description}
             imageUrl={course.imageUrl}
             duration={course.duration}
+            price={course.price}
           />
         ))}
       </div>
