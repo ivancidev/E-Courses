@@ -1,4 +1,4 @@
-import profile from '../../../assets/icons/profile.svg';
+import profile from '@/assets/icons/profile.svg';
 export default function ProfileDetails() {
   return (
     <div className="flex mt-12 gap-16 ml-20">
