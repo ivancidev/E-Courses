@@ -21,6 +21,10 @@ export default function mackServer({ environment = 'development' } = {}) {
       this.get('/courses', (schema: any) => {
         return schema.courses.all();
       });
+      this.get('/courses/:id', (schema: any, request: any) => {
+        const id = request.params.id;
+        return schema.courses.find(id);
+      });
     },
   });
 }
