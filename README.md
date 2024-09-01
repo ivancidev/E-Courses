@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# 🎓 E-Courses 📚
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+La plataforma E-Courses es una plataforma para tomar cursos en línea, que permite a los usuarios:
+- Navegar y buscar cursos en diversas categorías.
+- Registrarse e iniciar sesión de manera segura.
+- Visualizar detalles de cada curso, incluyendo duración, instructor, y precio.
+- Calificar y comentar sobre los cursos para ayudar a otros estudiantes en su elección.
+- Simular un perfil de usuario con sus cursos inscritos y calificaciones.
 
-Currently, two official plugins are available:
+## Screenshots📸
+## Home
+[![Captura-de-pantalla-2024-08-31-231531.png](https://i.postimg.cc/3wZPQ1Kd/Captura-de-pantalla-2024-08-31-231531.png)](https://postimg.cc/1gfWppVQ)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Courses
+[![Captura-de-pantalla-2024-08-31-231623.png](https://i.postimg.cc/SsNHS9sV/Captura-de-pantalla-2024-08-31-231623.png)](https://postimg.cc/McN9tv1j)
 
-## Expanding the ESLint configuration
+## Profile
+[![Captura-de-pantalla-2024-08-31-231658.png](https://i.postimg.cc/C5RtDVbq/Captura-de-pantalla-2024-08-31-231658.png)](https://postimg.cc/64NYJgjW)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías Utilizadas 💻
+- [React + Vite + TS](https://vitejs.dev/guide/) - Framework para construir interfaces de usuario con TS.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS para diseño responsivo.
+- [Zustand](https://github.com/pmndrs/zustand) - Herramienta para la gestión del estado.
+- [React Query](https://react-query.tanstack.com/) - Librería para la gestión de datos asincrónicos.
+- [MirageJS](https://miragejs.com/) - Simulador de API para pruebas y desarrollo.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Sigue estos pasos para configurar el proyecto localmente:
+
+```bash
+# Clona el repositorio
+git clone https://github.com/ivancidev/E-Courses.git
+
+# Navega al directorio del proyecto
+cd courses-online-proyect
+
+# Instala las dependencias
+npm install
+
+# Ejecuta la aplicación en modo desarrollo
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Uso 🛠️
+Después de ejecutar la aplicación, puedes acceder a las siguientes rutas:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+/: Página de inicio de sesion.
+/app: Página de presentacion.
+/app/courses: Navega por todos los cursos disponibles.
+/app/profile: Accede a tu perfil para ver tus cursos inscritos y calificaciones.
