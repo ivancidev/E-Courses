@@ -5,6 +5,7 @@ import Courses from '../pages/courses/courses';
 import Profile from '../pages/profile/profile';
 import SlotPropsSignIn from '../pages/login/login';
 import ProtectedRoute from './protected-route';
+import CourseDetails from '../pages/course-details/course-details';
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ export const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Courses />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'courses/:id',
+        element: (
+          <ProtectedRoute>
+            <CourseDetails />
           </ProtectedRoute>
         ),
       },
