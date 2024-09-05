@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import HoverRating from '../rating/rating';
+import HoverRating from '../../rating/rating';
 
 interface CourseCardProps {
   id?: string;

@@ -1,4 +1,4 @@
-import CourseCard from '../../components/shared/course-card';
+import CourseCard from '../../components/shared/course-card/course-card';
 import { useFetchGet } from '../../hooks/use-fetch-get';
 import { Course } from '../../interfaces/course';
 
